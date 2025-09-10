@@ -67,3 +67,11 @@ RUN ln /usr/bin/python3 $(printf "/usr/bin/python\r")
 RUN ln /usr/bin/python3 $(printf "/usr/bin/python")
 
 RUN echo "export XDG_RUNTIME_DIR='/tmp/runtime-root'" >> ~/.bashrc
+
+RUN apt-get install -y --no-install-recommends \
+    ros-kilted-imu-filter-madgwick \
+    ros-kilted-rviz2 \
+    ros-kilted-tf2-ros \
+    ros-kilted-tf2-tools \
+    python3-transforms3d
+
